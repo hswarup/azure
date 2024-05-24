@@ -166,8 +166,8 @@ Other Links
 
 [dbt databricks tutorial](https://docs.getdbt.com/guides/databricks?step=12)
 
-[Azure Databricks Workspace](https://portal.azure.com/#@swaruphariprasad79gmail.onmicrosoft.com/resource/subscriptions/1d411f52-9b5e-400b-b216-47d92a77108f/resourceGroups/hari_poc_resourcegroup/providers/Microsoft.Databricks/workspaces/hari_poc_workspace/overview)
+Azure Databricks Workspace - https://portal.azure.com/#@swaruphariprasad79gmail.onmicrosoft.com/resource/subscriptions/***/resourceGroups/hari_poc_resourcegroup/providers/Microsoft.Databricks/workspaces/hari_poc_workspace/overview
 
-[Azure Databricks URL](https://adb-469278326464774.14.azuredatabricks.net/?o=469278326464774)
+Azure Databricks URL - https://adb-***.azuredatabricks.net/?o=46***4
 
-[DBT Cloud URL](https://cloud.getdbt.com/develop/182071/projects/369926)
+DBT Cloud URL - https://cloud.getdbt.com/develop/***/projects/***
