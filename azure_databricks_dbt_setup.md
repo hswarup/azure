@@ -16,10 +16,10 @@
 		Enable Infrastructure Encryption - No
 		Enable CMK for Managed Disks - No
 		Enable CMK for Managed Services - No
-![Create_Az_Databricks_WS.png](Create_Az_Databricks_WS.png)
+![Create_Az_Databricks_WS.png](images/Create_Az_Databricks_WS.png)
 
 (3) Once you click "Create" , Wait for few minutes for the deployment to complete.
-![Az_Databricks_Deployed.png](Az_Databricks_Deployed.png)
+![Az_Databricks_Deployed.png](images/Az_Databricks_Deployed.png)
 
 	(3b)This will automatically create a Storage Account (called "dbstorage46pfhpsq5o7um") that serve as the Storage Layer for Databricks(where dbfs:/user/hive/warehouse/ mount path points to)
 		unity-catalog-storage
@@ -29,12 +29,14 @@
 		jobs
 		ephemeral
 	But we cannot access any of these "because of the deny assignment with name 'System deny assignment created by Azure Databricks"
+![Az_Databricks_default_StorageAccount.png](images/Az_Databricks_default_StorageAccount.png)
+![Az_Databricks_default_Containers.png](images/Az_Databricks_default_Containers.png)
 
 (4) Once deployment is complete , Click on "Launch Workspace".
-![Az_Databricks_Launch_Workspace.png](Az_Databricks_Launch_Workspace.png)
+![Az_Databricks_Launch_Workspace.png](images/Az_Databricks_Launch_Workspace.png)
 
 (5) This will take you out of "portal.azure.com" and opens something like "https://adb-469278326464774.14.azuredatabricks.net/"
-![Az_Databricks_LandingPage.png](Az_Databricks_LandingPage.png)
+![Az_Databricks_LandingPage.png](images/Az_Databricks_LandingPage.png)
 
 (6) Create a cluster in Databricks portal - 
 		Single Node Single User
@@ -43,10 +45,10 @@
 		Node type - Standard_DS3_v2(1 Driver - 14 GB Memory, 4 Cores)
 		1.5 DBU/h
 	Click on "Create Compute"
-![Az_Databricks_Create_Cluster.png](Az_Databricks_Create_Cluster.png)
+![Az_Databricks_Create_Cluster.png](images/Az_Databricks_Create_Cluster.png)
 
 	(6a) This will internally create 4 vCPU 14GB Memory Virtual Machines(called "5f984fc2d6a5491988c7f0e88f5643f8") that serve as All-purpose Compute Cluster for Databricks
-![Az_databricks_default_VMs.png](Az_databricks_default_VMs.png)
+![Az_databricks_default_VMs.png](images/Az_databricks_default_VMs.png)
 
 
 (7)Upload Data -
@@ -73,7 +75,7 @@ Protocol - HTTPS
 HTTP Path - sql/protocolv1/o/469278326464774/0521-024453-juvpona8
 JDBC URL - 2.6.25 or later
 Databricks supports drivers released within the last two years - jdbc:databricks://adb-469278326464774.14.azuredatabricks.net:443/default;transportMode=http;ssl=1;httpPath=sql/protocolv1/o/469278326464774/0521-024453-juvpona8;AuthMech=3;UID=token;PWD=<personal-access-token>
-![Az_Databricks_Connection_Details.png](Az_Databricks_Connection_Details.png)
+![Az_Databricks_Connection_Details.png](images/Az_Databricks_Connection_Details.png)
 
 ---------------------
 How to ingest data into "raw/bronze" layer into databricks from ADLS Gen2 and export data out of databricks
@@ -135,7 +137,7 @@ Under Settings, for Server Hostname, enter the server hostname value from the re
 	Under Development Credentials, for Token, enter the personal access token = dapi***f00
 	For Schema, Leave it blank and it uses "hive_metastore" as the default catalog and "default" as the default schema.
 
-![dbtCloud_create_project.png](dbtCloud_create_project.png)
+![dbtCloud_create_project.png](images/dbtCloud_create_project.png)
 
 Click Test Connection.
 
@@ -169,6 +171,3 @@ Other Links
 [Azure Databricks URL](https://adb-469278326464774.14.azuredatabricks.net/?o=469278326464774)
 
 [DBT Cloud URL](https://cloud.getdbt.com/develop/182071/projects/369926)
-
-
-
